@@ -2,7 +2,7 @@ function get_closing_paren(index, str) {
 	var open_nested_parens = 0
 	var position = index + 1
 	var sentence = str.split(' ')
-	var length = str.length
+	var length = sentence.length
 
 	while (position <= length) {
 		var char = sentence[position]
@@ -13,9 +13,12 @@ function get_closing_paren(index, str) {
     			return position
     		} else {
     			open_nested_parens -= 1
-    			position += 1
     		}
     	}
-    	return "No closing parenthesis :("
+        position += 1
+
     }
+
+    return "No closing parenthesis :("
+
 }
