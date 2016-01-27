@@ -6,16 +6,18 @@ function bracketValidator(string){
         '(' : ')'
     }
 
-    string.split(' ').every(function(val){
-        if(val === '{' || val === '[' || val === '(')
+    return string.split(' ').every(function(val){
+      console.log(openChars, pairs[val])
+        if(val === '{' || val === '[' || val === '('){
             openChars.push(val)
-        else if(pairs[val] === openChars[length]) {
+        } else if(pairs[val] === openChars[length]) {
             openChars.pop()
-            return t
         } else {
             return false
         }
+
+        return true
+
     })
 
-    return true
 }
