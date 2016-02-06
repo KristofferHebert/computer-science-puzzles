@@ -11,13 +11,13 @@ function TempTracker() {
         var modeValue = 0
         var mode
 
-        for(key in hashtable){
+        for(var key in hashtable){
 
             if(hashtable.hasOwnProperty(key)){
-
-                if(key < modeValue){
-                    modeValue = key
-                    mode = hashtable[key]
+                var currentNumber = Number(hashtable[key])
+                if( currentNumber > modeValue){
+                    modeValue = currentNumber
+                    mode = Number(key)
                 }
             }
 
