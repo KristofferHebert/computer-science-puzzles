@@ -1,4 +1,3 @@
-
 function LinkedListNode(value){
     return {
         value: value,

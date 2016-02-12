@@ -26,5 +26,4 @@ function fib (n){
 
     return current
 
-
 }
